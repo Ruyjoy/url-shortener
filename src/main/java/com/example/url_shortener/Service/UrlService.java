@@ -37,7 +37,6 @@ public class UrlService {
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
         StringBuilder shortUrl = new StringBuilder();
         Random random = new Random();
-
         for (int i = 0; i < 6; i++) {
             shortUrl.append(characters.charAt(random.nextInt(characters.length())));
         }
