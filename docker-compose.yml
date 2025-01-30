@@ -1,13 +1,12 @@
-version: "1.0"
+version: "1.1"
 
 services:
   java_app:
     container_name: java_app
-    image: pee-java_app:1.0.0
+    image: url-shortener
     build: .
     ports:
       - 9000:9000
     environment:
-      - DATABASE_URL=mongodb+srv://User_Java:java123@cluster0.8ojz2.mongodb.net/url-shortener?retryWrites=true&w=majority
-      - DATABASE_USERNAME=url-shortener
-      - DATABASE_EXCLUDE=org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+      - db_name=User_Java
+      - db_pass=java123
